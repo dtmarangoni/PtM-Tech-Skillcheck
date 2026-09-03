@@ -1,0 +1,28 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_PTM_SkillCheck_Tavern_DoorSystem(
+	(ITEM)DOOR_Double_Medium_City_House_B_000_035e24ab-bd19-4e11-a48f-325edc447af3,
+	(ITEM)PTM_SkillCheck_Tavern_DoorButton_000_035285a5-4e57-45ba-aaec-346340f98bb7
+);
+KBSECTION
+IF
+	UseFinished(_, _Button, 1) AND
+	DB_PTM_SkillCheck_Tavern_DoorSystem(_Door, _Button) AND
+	IsClosed(_Door, 1)
+THEN
+	PROC_ItemUnlockAndOpen(_Door);
+
+IF
+	UseFinished(_, _Button, 1) AND
+	DB_PTM_SkillCheck_Tavern_DoorSystem(_Door, _Button) AND
+	IsOpened(_Door, 1)
+THEN
+	Close(_Door);
+EXITSECTION
+NOT DB_PTM_SkillCheck_Tavern_DoorSystem(
+	(ITEM)DOOR_Double_Medium_City_House_B_000_035e24ab-bd19-4e11-a48f-325edc447af3,
+	(ITEM)PTM_SkillCheck_Tavern_DoorButton_000_035285a5-4e57-45ba-aaec-346340f98bb7
+);
+ENDEXITSECTION
+ParentTargetEdge "__Start"

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<stats stat_object_definition_id="a8098c1a-f86e-11da-bd1a-00112444be1e">
+  <stat_objects>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7b24e8f1-7a72-4f6b-969c-ad9a90bffbbf" />
+        <field name="Name" type="NameTableFieldDefinition" value="PTM_SkillCheck_Tavern_Tavern_Guard" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="c20c6766-74c7-4e8e-a36a-da6170265499" />
+        <field name="Strength" type="IntegerTableFieldDefinition" value="14" />
+        <field name="Dexterity" type="IntegerTableFieldDefinition" value="12" />
+        <field name="Constitution" type="IntegerTableFieldDefinition" value="13" />
+        <field name="Armor" type="IntegerTableFieldDefinition" value="14" />
+      </fields>
+    </stat_object>
+  </stat_objects>
+</stats>

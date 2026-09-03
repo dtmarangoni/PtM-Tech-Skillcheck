@@ -1,0 +1,57 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_PTM_SkillCheck_Tavern_HiddenButtonSystem(
+	(TRIGGER)EventTrigger_000_e8917d51-c0e6-46dc-9ffd-e1f9435626fa,
+	(ITEM)PTM_SkillCheck_Tavern_DoorButton_000_035285a5-4e57-45ba-aaec-346340f98bb7,
+	(DIFFICULTYCLASS)Act1_Medium_fa621d38-6f83-4e42-a55c-6aa651a75d46
+);
+KBSECTION
+IF
+	DB_PTM_SkillCheck_Tavern_HiddenButtonSystem(_, _Button, _) AND
+	NOT DB_PTM_SkillCheck_Tavern_HiddenButtonDiscovered() AND
+	IsInvisible(_Button, 0)
+THEN
+	SetVisible(_Button, 0);
+
+
+IF
+	EnteredTrigger(_Player, _Trigger) AND
+	DB_Players(_Player) AND
+	DB_PTM_SkillCheck_Tavern_HiddenButtonSystem(_Trigger, _Button, _DifficultyClass) AND
+	NOT DB_PTM_SkillCheck_Tavern_HiddenButtonPerceptionCheckMade(_Player)
+THEN
+	RequestPassiveRoll(
+		_Player,
+		_Button,
+		"SkillCheck",
+		"Perception",
+		_DifficultyClass,
+		0,
+		"PTM_SkillCheck_Tavern_HiddenButtonPerceptionCheckRoll"
+	);
+	DB_PTM_SkillCheck_Tavern_HiddenButtonPerceptionCheckMade(_Player);
+
+
+IF
+    RollResult(
+		"PTM_SkillCheck_Tavern_HiddenButtonPerceptionCheckRoll",
+        _Player,
+        _Button,
+        1,
+        0,
+        _
+    ) AND
+	DB_Players(_Player) AND
+    DB_PTM_SkillCheck_Tavern_HiddenButtonSystem(_, (ITEM)_Button, _)
+THEN
+	SetVisible(_Button, 1);
+	DB_PTM_SkillCheck_Tavern_HiddenButtonDiscovered();
+EXITSECTION
+NOT DB_PTM_SkillCheck_Tavern_HiddenButtonSystem(
+	(TRIGGER)EventTrigger_000_e8917d51-c0e6-46dc-9ffd-e1f9435626fa,
+	(ITEM)PTM_SkillCheck_Tavern_DoorButton_000_035285a5-4e57-45ba-aaec-346340f98bb7,
+	(DIFFICULTYCLASS)Act1_Easy_31e92da6-bac9-46f7-af99-5f33d98fd4f0
+);
+ENDEXITSECTION
+ParentTargetEdge "__Start"

@@ -1,0 +1,21 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_PTM_SkillCheck_Tavern_GuardDialog(
+	(ITEM)DOOR_Double_Medium_City_House_B_000_035e24ab-bd19-4e11-a48f-325edc447af3,
+	(DIALOGRESOURCE)PTM_SkillCheck_Tavern_Guard_6f87bddc-939d-0c95-68c5-67c9bc67fe3e
+);
+KBSECTION
+IF
+	DialogRollResult(_Player, 1, _Dialog, 0, _) AND
+	DB_PTM_SkillCheck_Tavern_GuardDialog(_Door, _Dialog) AND
+	IsClosed(_Door, 1)
+THEN
+	Unlock(_Door);
+EXITSECTION
+NOT DB_PTM_SkillCheck_Tavern_GuardDialog(
+	(ITEM)DOOR_Double_Medium_City_House_B_000_035e24ab-bd19-4e11-a48f-325edc447af3,
+	(DIALOGRESOURCE)PTM_SkillCheck_Tavern_Guard_6f87bddc-939d-0c95-68c5-67c9bc67fe3e
+);
+ENDEXITSECTION
+ParentTargetEdge "__Start"

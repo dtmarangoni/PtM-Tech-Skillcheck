@@ -1,0 +1,8 @@
+new entry "PTM_SkillCheck_Tavern_Tavern_Guard"
+type "Character"
+using "Human_Commoner"
+data "Strength" "14"
+data "Dexterity" "12"
+data "Constitution" "13"
+data "Armor" "14"
+

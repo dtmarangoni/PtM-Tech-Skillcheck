@@ -1,0 +1,32 @@
+{
+  "Flags": {
+    "0a270ae6-994d-4113-a8b0-f0d5915ea640": [
+      "PTM_SkillCheck_Tavern_PersuasionCheckMade",
+      "PTM_SkillCheck_Tavern_GuardVisited"
+    ],
+    "0bfa5352-745a-4b75-b169-45569979305c": [
+      "PTM_SkillCheck_Tavern_GuardVisited",
+      "PTM_SkillCheck_Tavern_AllowEntrance"
+    ],
+    "2c78f6e3-78e2-4dd5-be6e-2d728101c5e9": [
+      "PTM_SkillCheck_Tavern_PersuasionCheckMade",
+      "PTM_SkillCheck_Tavern_GuardVisited"
+    ],
+    "462b3d73-a3f8-4c85-a04a-2b65b81b6cfe": [
+      "PTM_SkillCheck_Tavern_GuardVisited",
+      "PTM_SkillCheck_Tavern_AllowEntrance"
+    ],
+    "431a605d-051a-4b0c-8dd3-3789ed5028e1": [ ],
+    "862b67cd-5bc2-460d-aeba-ba101d6affe3": [ ],
+    "a0a3e9d1-a949-4cba-8b27-c21ee2952500": [ ]
+  },
+  "Lines": {
+    "0a270ae6-994d-4113-a8b0-f0d5915ea640": "You again! Turn back.",
+    "0bfa5352-745a-4b75-b169-45569979305c": "Hello friend, please come in.",
+    "2c78f6e3-78e2-4dd5-be6e-2d728101c5e9": "Stay back, we don't want more trouble here!",
+    "462b3d73-a3f8-4c85-a04a-2b65b81b6cfe": "I've already told you to get off.",
+    "431a605d-051a-4b0c-8dd3-3789ed5028e1": "Be gone!",
+    "862b67cd-5bc2-460d-aeba-ba101d6affe3": "We are having a lot of problem with thiefs and troublemakers lately. I will let you come in, please be civilized.",
+    "a0a3e9d1-a949-4cba-8b27-c21ee2952500": "You'll not deceive me, get off."
+  }
+}
