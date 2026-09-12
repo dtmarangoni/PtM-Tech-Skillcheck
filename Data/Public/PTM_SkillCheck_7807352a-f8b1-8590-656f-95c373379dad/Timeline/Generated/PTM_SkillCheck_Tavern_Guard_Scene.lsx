@@ -3,7 +3,7 @@
     <version major="4" minor="8" revision="0" build="500"/>
     <region id="TLScene">
         <node id="root">
-            <attribute id="Identifier" type="guid" value="55e32dff-e57c-82c5-f1fb-29d52817e3c2"/>
+            <attribute id="Identifier" type="guid" value="081b7535-d0c9-d1c7-a3bc-026035046da3"/>
             <attribute id="SceneBounds" type="fvec3">
                 <float3 x="1" y="0" z="2"/>
             </attribute>
@@ -190,7 +190,7 @@
                         <node id="TLActor">
                             <attribute id="ActorType" type="uint8" value="8"/>
                             <attribute id="ImportantForStaging" type="bool" value="true"/>
-                            <attribute id="TemplateId" type="guid" value="19dc6cab-aa38-4f09-b9cf-546e1c0ecb8a"/>
+                            <attribute id="TemplateId" type="guid" value="3278f064-5353-4c08-ab96-c2f432d0fda0"/>
                             <children>
                                 <node id="Transforms">
                                     <children>
